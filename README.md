@@ -1,5 +1,7 @@
 # react-router-dispatcher-status-code
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/adam-26/react-router-dispatcher-status-code.svg)](https://greenkeeper.io/)
+
 [![npm](https://img.shields.io/npm/v/react-router-dispatcher-status-code.svg)](https://www.npmjs.com/package/react-router-dispatcher-status-code)
 [![npm](https://img.shields.io/npm/dm/react-router-dispatcher-status-code.svg)](https://www.npmjs.com/package/react-router-dispatcher-status-code)
 [![CircleCI branch](https://img.shields.io/circleci/project/github/adam-26/react-router-dispatcher-status-code/master.svg)](https://circleci.com/gh/adam-26/react-router-dispatcher-status-code/tree/master)
