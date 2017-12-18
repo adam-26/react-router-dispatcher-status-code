@@ -74,7 +74,7 @@ const {
 } = createRouteDispatchers(routes, [[GET_STATUS_CODE]]);
 
 // Server dispatch
-dispatchServerActions(req.url, params).then(({ statusCode }) => {
+dispatchServerActions(req.url, params).then(({ httpResponse: { statusCode } }) => {
   // Set the HTTP response code - this is expressjs syntax
   res.status(statusCode);
 

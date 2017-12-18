@@ -60,7 +60,7 @@
   "peerDependencies": {
     "react": "^16.0.0",
     "react-router": "^4.2.0",
-    "react-router-dispatcher": "^2.0.0-beta.21"
+    "react-router-dispatcher": "^2.0.0-beta.24"
   },
   "dependencies": {
     "invariant": "^2.2.2"
