@@ -11,15 +11,17 @@ export default function getStatusCodeAction(statusCode?: number) {
     return {
         name: GET_STATUS_CODE,
 
-        staticMethod: (routeProps, actionProps) => {
-            actionProps.statusCode = statusCode || actionProps.statusCode;
+        staticMethod: (routeProps, { httpResponse }) => {
+            httpResponse.statusCode = statusCode || httpResponse.statusCode;
         },
 
-        initServerAction: ({ statusCode }) => ({
-            statusCode: statusCode || 200
-        }),
+        initServerAction: ({ httpResponse }) => {
+            return {
+                httpResponse: httpResponse || { statusCode: 200 }
+            };
+        },
 
-        mapParamsToProps: ({ statusCode }) => ({ statusCode }),
+        mapParamsToProps: ({ httpResponse }) => ({ httpResponse }),
 
         // stop processing actions on the server if statusCode is not OK.
         endServerActions: ({ statusCode }) => statusCode < 200 || statusCode >= 300

@@ -16,42 +16,42 @@ describe('getStatusCodeAction', () => {
             const params = {};
             const props = action.initServerAction(params);
 
-            expect(props.statusCode).toBeDefined();
+            expect(props.httpResponse).toBeDefined();
         });
 
         test('retains existing instance', () => {
-            const params = { statusCode: 400 };
+            const params = { httpResponse: { statusCode: 400 } };
             const props = action.initServerAction(params);
 
-            expect(props.statusCode).toEqual(400);
+            expect(props.httpResponse).toEqual({ statusCode: 400 });
         });
     });
 
     describe('mapParamsToProps', () => {
         test('assigns props from action factory', () => {
-            const params = { statusCode: 200 };
+            const params = { httpResponse: { statusCode: 200 } };
             action = getStatusCodeAction();
 
             const props = action.mapParamsToProps(params);
-            expect(props.statusCode).toEqual(200);
+            expect(props.httpResponse).toEqual({ statusCode: 200 });
         });
     });
 
     describe('staticMethod', () => {
         test('does not assign statusCode when not defined', () => {
-            const params = { statusCode: 200 };
+            const params = { httpResponse: { statusCode: 200 } };
             action = getStatusCodeAction();
 
             action.staticMethod({}, params);
-            expect(params.statusCode).toEqual(200);
+            expect(params.httpResponse).toEqual({ statusCode: 200 });
         });
 
         test('assigns status code value', () => {
-            const params = { statusCode: 200 };
+            const params = { httpResponse: { statusCode: 200 } };
             action = getStatusCodeAction(201);
 
             action.staticMethod({}, params);
-            expect(params.statusCode).toEqual(201);
+            expect(params.httpResponse).toEqual({ statusCode: 201 });
         });
     });
 });
