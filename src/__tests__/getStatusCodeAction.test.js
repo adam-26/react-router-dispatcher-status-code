@@ -1,4 +1,4 @@
-import getStatusCodeAction, { GET_STATUS_CODE } from "../getStatusCodeAction";
+import getStatusCodeAction, { STATUS_CODE } from "../getStatusCodeAction";
 
 describe('getStatusCodeAction', () => {
     let action;
@@ -8,7 +8,7 @@ describe('getStatusCodeAction', () => {
     });
 
     test('name', () => {
-        expect(action.name).toBe(GET_STATUS_CODE);
+        expect(action.name).toBe(STATUS_CODE);
     });
 
     describe('initServerAction', () => {
@@ -52,6 +52,22 @@ describe('getStatusCodeAction', () => {
 
             action.staticMethod({}, params);
             expect(params.httpResponse).toEqual({ statusCode: 201 });
+        });
+    });
+
+    describe('stopServerActions', () => {
+        test('returns false when statusCode is OK', () => {
+            const params = { httpResponse: { statusCode: 200 } };
+            action = getStatusCodeAction();
+
+            expect(action.stopServerActions({}, params)).toBe(false);
+        });
+
+        test('returns true when statusCode is not OK', () => {
+            const params = { httpResponse: { statusCode: 404 } };
+            action = getStatusCodeAction();
+
+            expect(action.stopServerActions({}, params)).toBe(true);
         });
     });
 });

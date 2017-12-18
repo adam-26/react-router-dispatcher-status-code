@@ -1,9 +1,10 @@
-import redirectAction, { GET_STATUS_CODE } from './getStatusCodeAction';
+import statusCodeAction, { STATUS_CODE } from './getStatusCodeAction';
 import withStatusCode from './withStatusCode';
 
 export {
-    GET_STATUS_CODE,
+    STATUS_CODE,
+    STATUS_CODE as GET_STATUS_CODE,
     withStatusCode
 };
 
-export default redirectAction;
+export default statusCodeAction;
