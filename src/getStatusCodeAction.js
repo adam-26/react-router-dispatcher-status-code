@@ -1,15 +1,15 @@
 // @flow
 import invariant from 'invariant';
 
-export const GET_STATUS_CODE = 'GET_STATUS_CODE_ACTION';
+export const STATUS_CODE = 'status-code';
 
-export default function getStatusCodeAction(statusCode?: number) {
+export default function statusCodeAction(statusCode?: number) {
     if (typeof statusCode !== 'undefined' && statusCode !== null) {
         invariant(typeof statusCode === 'number', 'statusCode expects a number.');
     }
 
     return {
-        name: GET_STATUS_CODE,
+        name: STATUS_CODE,
 
         staticMethod: (routeProps, { httpResponse }) => {
             httpResponse.statusCode = statusCode || httpResponse.statusCode;
@@ -24,6 +24,6 @@ export default function getStatusCodeAction(statusCode?: number) {
         mapParamsToProps: ({ httpResponse }) => ({ httpResponse }),
 
         // stop processing actions on the server if statusCode is not OK.
-        endServerActions: ({ statusCode }) => statusCode < 200 || statusCode >= 300
+        stopServerActions: (routeProps, { httpResponse: { statusCode } }) => statusCode < 200 || statusCode >= 300
     };
 }

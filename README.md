@@ -30,9 +30,9 @@ yarn add react-router-dispatcher-status-code
 ### Usage
 
 ```js
-import getStatusCodeAction, { withStatusCode, GET_STATUS_CODE } from 'react-router-dispatcher-status-code';
+import statusCodeAction, { withStatusCode, STATUS_CODE } from 'react-router-dispatcher-status-code';
 
-// GET_STATUS_CODE is the action name, used to configure react-router-dispatcher
+// STATUS_CODE is the action name, used to configure react-router-dispatcher
 ```
 
 ### Example
@@ -65,7 +65,7 @@ export default routes;
 
 ```js
 import { createRouteDispatchers } from 'react-router-dispatcher';
-import { GET_STATUS_CODE } from 'react-router-dispatcher-status-code';
+import { STATUS_CODE } from 'react-router-dispatcher-status-code';
 import routes from './routes';
 
 const {
@@ -73,16 +73,17 @@ const {
     ClientRouteDispatcher,
     dispatchClientActions,
     dispatchServerActions
-} = createRouteDispatchers(routes, [[GET_STATUS_CODE]]);
+} = createRouteDispatchers(routes, [[STATUS_CODE]]);
 
 // Server dispatch
 dispatchServerActions(req.url, params).then(({ httpResponse: { statusCode } }) => {
-  // Set the HTTP response code - this is expressjs syntax
-  res.status(statusCode);
-
   if (statusCode >= 300 || statusCode < 400) {
-    // redirect
+    // redirect - expressjs syntax
+    return res.redirect(statusCode, ....);
   }
+
+  // Set the HTTP response code - expressjs syntax
+  res.status(statusCode);
 
   if (statusCode >= 500) {
     // render an error page
@@ -94,7 +95,7 @@ dispatchServerActions(req.url, params).then(({ httpResponse: { statusCode } }) =
 
 ### API
 
-`getStatusCodeAction(statusCode)`
+`statusCodeAction(statusCode)`
 
 #### Parameters
 

@@ -1,7 +1,7 @@
 // @flow
 import { withActions } from 'react-router-dispatcher';
-import getStatusCodeAction from './getStatusCodeAction';
+import statusCodeAction from './getStatusCodeAction';
 
 export default function withStatusCode(statusCode) {
-    return withActions(getStatusCodeAction(statusCode));
+    return withActions(statusCodeAction(statusCode));
 }
