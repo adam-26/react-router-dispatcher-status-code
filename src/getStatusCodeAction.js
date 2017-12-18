@@ -15,9 +15,13 @@ export default function statusCodeAction(statusCode?: number) {
             httpResponse.statusCode = statusCode || httpResponse.statusCode;
         },
 
-        initServerAction: ({ httpResponse }) => {
+        initServerAction: (params) => {
+            const httpResponse = params.httpResponse || {};
             return {
-                httpResponse: httpResponse || { statusCode: 200 }
+                httpResponse: {
+                    statusCode: 200,
+                    ...httpResponse,
+                }
             };
         },
 
