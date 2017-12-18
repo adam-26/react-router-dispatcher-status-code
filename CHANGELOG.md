@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/adam-26/react-router-metadata-action/compare/v1.0.2...v1.1.0) (2017-12-18)
+
+
+### Features
+
+* **httpResponse:** utilize dispatcher response params ([fab6e09](https://github.com/adam-26/react-router-metadata-action/commit/fab6e09))
+* **httpResponse:** utilize dispatcher response params ([#5](https://github.com/adam-26/react-router-metadata-action/issues/5)) ([0470088](https://github.com/adam-26/react-router-metadata-action/commit/0470088))
+
+
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/adam-26/react-router-metadata-action/compare/v1.0.1...v1.0.2) (2017-12-15)
 
