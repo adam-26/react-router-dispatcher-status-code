@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.5"></a>
+## [1.1.5](https://github.com/adam-26/react-router-metadata-action/compare/v1.1.4...v1.1.5) (2017-12-20)
+
+
+### Bug Fixes
+
+* **dependencies:** update ([dc7b074](https://github.com/adam-26/react-router-metadata-action/commit/dc7b074))
+* **dependencies:** update ([#10](https://github.com/adam-26/react-router-metadata-action/issues/10)) ([7fe9598](https://github.com/adam-26/react-router-metadata-action/commit/7fe9598))
+* **merge:** from master ([f969869](https://github.com/adam-26/react-router-metadata-action/commit/f969869))
+
+
+
 <a name="1.1.4"></a>
 ## [1.1.4](https://github.com/adam-26/react-router-metadata-action/compare/v1.1.3...v1.1.4) (2017-12-19)
 
