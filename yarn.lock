@@ -3512,9 +3512,9 @@ react-router-config@^1.0.0-beta.4:
   version "1.0.0-beta.4"
   resolved "https://registry.yarnpkg.com/react-router-config/-/react-router-config-1.0.0-beta.4.tgz#d202496dd0eabdf06cf24eb0793031f6891eef01"
 
-react-router-dispatcher@^2.0.0-beta.25:
-  version "2.0.0-beta.26"
-  resolved "https://registry.yarnpkg.com/react-router-dispatcher/-/react-router-dispatcher-2.0.0-beta.26.tgz#934fd31d8b3e431f58380b8642779115f685dc6d"
+react-router-dispatcher@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-router-dispatcher/-/react-router-dispatcher-2.0.1.tgz#340b8c12879103233d40df31e998626483012f82"
   dependencies:
     history "^4.7.2"
     hoist-non-react-statics "^2.3.1"
