@@ -1,6 +1,6 @@
 {
   "name": "react-router-dispatcher-status-code",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "description": "react-router-dispatcher action to assign HTTP status codes",
   "main": "lib/index.js",
   "scripts": {
@@ -44,7 +44,7 @@
     "eslint": "^4.12.1",
     "eslint-plugin-jest": "^21.5.0",
     "eslint-plugin-react": "^7.5.1",
-    "jest": "^21.2.1",
+    "jest": "^22.0.0",
     "jest-cli": "^21.2.1",
     "jest-junit-reporter": "^1.1.0",
     "prop-types": "^15.6.0",
