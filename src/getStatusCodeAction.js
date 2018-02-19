@@ -25,9 +25,6 @@ export default function statusCodeAction(statusCode?: number) {
             };
         },
 
-        mapParamsToProps: ({ httpResponse }) => ({ httpResponse }),
-
-        // stop processing actions on the server if statusCode is not OK.
-        stopServerActions: (routeProps, { httpResponse: { statusCode } }) => statusCode < 200 || statusCode >= 300
+        mapParamsToProps: ({ httpResponse }) => ({ httpResponse })
     };
 }

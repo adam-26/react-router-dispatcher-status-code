@@ -54,20 +54,4 @@ describe('getStatusCodeAction', () => {
             expect(params.httpResponse).toEqual({ statusCode: 201 });
         });
     });
-
-    describe('stopServerActions', () => {
-        test('returns false when statusCode is OK', () => {
-            const params = { httpResponse: { statusCode: 200 } };
-            action = getStatusCodeAction();
-
-            expect(action.stopServerActions({}, params)).toBe(false);
-        });
-
-        test('returns true when statusCode is not OK', () => {
-            const params = { httpResponse: { statusCode: 404 } };
-            action = getStatusCodeAction();
-
-            expect(action.stopServerActions({}, params)).toBe(true);
-        });
-    });
 });
