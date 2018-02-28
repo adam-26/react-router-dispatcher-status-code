@@ -27,31 +27,32 @@ describe('getStatusCodeAction', () => {
         });
     });
 
-    describe('mapParamsToProps', () => {
+    describe('filterParamsToProps', () => {
         test('assigns props from action factory', () => {
-            const params = { httpResponse: { statusCode: 200 } };
+            const params = { httpResponse: { statusCode: 200 }, other: {} };
             action = getStatusCodeAction();
 
-            const props = action.mapParamsToProps(params);
+            const props = action.filterParamsToProps(params);
             expect(props.httpResponse).toEqual({ statusCode: 200 });
+            expect(props.other).not.toBeDefined();
         });
     });
 
     describe('staticMethod', () => {
         test('does not assign statusCode when not defined', () => {
-            const params = { httpResponse: { statusCode: 200 } };
+            const props = { httpResponse: { statusCode: 200 } };
             action = getStatusCodeAction();
 
-            action.staticMethod({}, params);
-            expect(params.httpResponse).toEqual({ statusCode: 200 });
+            action.staticMethod(props);
+            expect(props.httpResponse).toEqual({ statusCode: 200 });
         });
 
         test('assigns status code value', () => {
-            const params = { httpResponse: { statusCode: 200 } };
+            const props = { httpResponse: { statusCode: 200 } };
             action = getStatusCodeAction(201);
 
-            action.staticMethod({}, params);
-            expect(params.httpResponse).toEqual({ statusCode: 201 });
+            action.staticMethod(props);
+            expect(props.httpResponse).toEqual({ statusCode: 201 });
         });
     });
 });

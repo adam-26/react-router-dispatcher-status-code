@@ -1,12 +1,11 @@
 # react-router-dispatcher-status-code
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/adam-26/react-router-dispatcher-status-code.svg)](https://greenkeeper.io/)
-
 [![npm](https://img.shields.io/npm/v/react-router-dispatcher-status-code.svg)](https://www.npmjs.com/package/react-router-dispatcher-status-code)
 [![npm](https://img.shields.io/npm/dm/react-router-dispatcher-status-code.svg)](https://www.npmjs.com/package/react-router-dispatcher-status-code)
 [![CircleCI branch](https://img.shields.io/circleci/project/github/adam-26/react-router-dispatcher-status-code/master.svg)](https://circleci.com/gh/adam-26/react-router-dispatcher-status-code/tree/master)
-[![Code Climate](https://img.shields.io/codeclimate/coverage/github/adam-26/react-router-dispatcher-status-code.svg)](https://codeclimate.com/github/adam-26/react-router-dispatcher-status-code)
-[![Code Climate](https://img.shields.io/codeclimate/github/adam-26/react-router-dispatcher-status-code.svg)](https://codeclimate.com/github/adam-26/react-router-dispatcher-status-code)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f7b74237da220070a5fb/maintainability)](https://codeclimate.com/github/adam-26/react-router-dispatcher-status-code/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/f7b74237da220070a5fb/test_coverage)](https://codeclimate.com/github/adam-26/react-router-dispatcher-status-code/test_coverage)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 A [react-router-dispatcher](https://github.com/adam-26/react-router-dispatcher) **action** for defining react-router status codes that support server-side streaming.
