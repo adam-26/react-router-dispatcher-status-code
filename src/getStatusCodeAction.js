@@ -11,7 +11,7 @@ export default function statusCodeAction(statusCode?: number) {
     return {
         name: STATUS_CODE,
 
-        staticMethod: (routeProps, { httpResponse }) => {
+        staticMethod: ({ httpResponse }) => {
             httpResponse.statusCode = statusCode || httpResponse.statusCode;
         },
 
@@ -25,6 +25,8 @@ export default function statusCodeAction(statusCode?: number) {
             };
         },
 
-        mapParamsToProps: ({ httpResponse }) => ({ httpResponse })
+        filterParamsToProps: ({ httpResponse }) => {
+            return { httpResponse };
+        },
     };
 }
