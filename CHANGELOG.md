@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/adam-26/react-router-metadata-action/compare/v1.1.6...v2.0.0) (2018-02-28)
+
+
+### Bug Fixes
+
+* **code:** Update react-router-dispatcher ([698fec2](https://github.com/adam-26/react-router-metadata-action/commit/698fec2))
+* **code:** Update react-router-dispatcher ([#13](https://github.com/adam-26/react-router-metadata-action/issues/13)) ([2ac8839](https://github.com/adam-26/react-router-metadata-action/commit/2ac8839))
+
+
+### BREAKING CHANGES
+
+* **code:** Update to latest version of dependency and modify code accordingly.
+* **code:** Update to latest version of dependency and modify code accordingly.
+
+
+
 <a name="1.1.6"></a>
 ## [1.1.6](https://github.com/adam-26/react-router-metadata-action/compare/v1.1.5...v1.1.6) (2018-02-19)
 
